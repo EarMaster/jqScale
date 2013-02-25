@@ -1,0 +1,11 @@
+{
+	"name": "jqScale",
+	"version": "0.1.0",
+	"title": "jquery Scale",
+	"author": "Toni Wagner",
+	"licenses": "MIT",
+	"dependencies": "jquery",
+	"description": "a jQuery plugin that will GET / CALCULATE (including inherited scaling from parent Nodes) / SET the css-scale factor (via transform: matrix) of dom-elements ",
+	"keywords": ["css", "matrix", "scale", "zoom" ],
+	"homepage": "https://github.com/itsatony/jqScale"
+}
