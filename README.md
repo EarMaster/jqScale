@@ -1,4 +1,4 @@
-jqScale
+jqScale (v0.1.1)
 =======
 
 a jQuery plugin that will GET / CALCULATE (including inherited scaling from parent Nodes) / SET the css-scale factor (via transform: matrix) of dom-elements 

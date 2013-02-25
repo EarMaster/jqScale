@@ -1,5 +1,5 @@
 /**
- * jqscale.js v0.1.0
+ * jqscale.js v0.1.1
  * jQuery dom-element scaling Plugin - released under MIT License 
  * Author: Toni Wagner <i@itsatony.com>
  * https://github.com/itsatony/jqScale
