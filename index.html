@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Jqscale by itsatony</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/itsatony/jqScale">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/itsatony/jqScale/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/itsatony/jqScale/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Jqscale</h1>
+          <p>a jQuery plugin that will set or get or calculate dom-elements css-scale factor</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/itsatony">itsatony</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
+        </div>
+
+        <p>jqScale is a jQuery plugin that will GET / CALCULATE (including inherited scaling from parent Nodes) / SET the css-scale factor (via transform: matrix) of dom-elements </p>
+
+<h1>examples / demo</h1>
+
+<ul>
+<li>
+<p>getting the scale of ONE element</p>
+
+<p><code>jQuery('#myDomElement').jqscale();</code></p>
+
+<p>this will return     [ 1, 1 ];     (scale for x-axis, scale for y-axis)</p>
+</li>
+<li>
+<p>getting the 'TRUE' scale of an element (meaning the element's scale multiplied with all its parents' scales!)</p>
+
+<p><code>jQuery('#myDomElement').jqscale(true);</code></p>
+</li>
+<li>
+<p>setting the scale for an element:</p>
+
+<p><code>jQuery('#myDomElement').jqscale(0.5);</code></p>
+</li>
+<li>
+<p>setting different scale values for x and y axis:</p>
+
+<p><code>jQuery('#myDomElement').jqscale(0.5, 0.7);</code></p>
+</li>
+</ul>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
