@@ -1,6 +1,6 @@
 /**
  * jqscale.js v0.1.1
- * jQuery dom-element scaling Plugin - released under MIT License 
+ * jQuery dom-element scaling Plugin - released under MIT License
  * Author: Toni Wagner <i@itsatony.com>
  * https://github.com/itsatony/jqScale
  * Copyright (c) 2012-2013 ViSERiON UG haftungsbeschraenkt {{{
@@ -52,11 +52,11 @@
  *
  *
  *
- * 
+ *
  */
- 
+
  (function($) {
-	$.fn.jqscale = function(option, independentScaleY) {
+	$.fn.jqScale = function(option, independentScaleY) {
 		var thisScaler = this;
 		var action = 'getScale';
 		if (typeof option === 'number') {
@@ -64,7 +64,7 @@
 			var scaleX = option;
 			var scaleY = (typeof independentScaleY === 'number') ? independentScaleY : option;
 		} else if (typeof option === 'boolean' && option === true)  {
-			action = 'calculateScale'
+			action = 'calculateScale';
 		}
 		$.fn.jqScale.setScale = function(element) {
 			var matrix = $.fn.jqScale.getElementTransformMatrix(element);
@@ -74,7 +74,7 @@
 			$(element).css('transform', 'matrix(' + matrix.toString(',') + ')');
 			$(element).attr('data-jqscale', scaleX + ',' + scaleY);
 		};
-		$.fn.jqScale.getScale = function(element) {	
+		$.fn.jqScale.getScale = function(element) {
 			var matrix = $.fn.jqScale.getElementTransformMatrix(element);
 			$(element).attr('data-jqscale', matrix[0] + ',' + matrix[3]);
 			return [ matrix[0], matrix[3] ];
@@ -90,19 +90,19 @@
 			aggregatedScaleX = aggregatedScaleX * elementScales[0];
 			aggregatedScaleY = aggregatedScaleX * elementScales[1];
 			for (var i = 0; i < parentCount; i++) {
-				var elementScales = $.fn.jqScale.getScale(parents[i]);
+				elementScales = $.fn.jqScale.getScale(parents[i]);
 				parentScales.push(elementScales);
 				aggregatedScaleX = aggregatedScaleX * elementScales[0];
 				aggregatedScaleY = aggregatedScaleX * elementScales[1];
 			}
 			$(element).attr('data-aggregated-jqscale', aggregatedScaleX + ',' + aggregatedScaleY);
 			return [ aggregatedScaleX, aggregatedScaleY ];
-		};		
+		};
 		$.fn.jqScale.getElementTransformMatrix = function(element) {
 			var matrixArray = [];
 			var matrixStrings = $(element).css('transform');
 			if (matrixStrings === null) {
-				var matrixStrings = $(element).css('-webkit-transform');
+				matrixStrings = $(element).css('-webkit-transform');
 			}
 			if (typeof matrixStrings === 'undefined' || matrixStrings === null || matrixStrings.indexOf('matrix') !== 0) {
 				return [1,0,0,1,0,0];
