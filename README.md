@@ -8,21 +8,21 @@ examples:
 
 * getting the scale of ONE element
 
-   ``jQuery('#myDomElement').jqscale();``
+   ``jQuery('#myDomElement').jqScale();``
 
     this will return     [ 1, 1 ];     (scale for x-axis, scale for y-axis)
 
 
 * getting the 'TRUE' scale of an element (meaning the element's scale multiplied with all its parents' scales!)
 
-    ``jQuery('#myDomElement').jqscale(true);``
+    ``jQuery('#myDomElement').jqScale(true);``
 
 * setting the scale for an element:
 
-    ``jQuery('#myDomElement').jqscale(0.5);``
+    ``jQuery('#myDomElement').jqScale(0.5);``
 
 * setting different scale values for x and y axis:
 
-    ``jQuery('#myDomElement').jqscale(0.5, 0.7);``
+    ``jQuery('#myDomElement').jqScale(0.5, 0.7);``
 
 		
